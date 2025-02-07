@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#f5f3f0];
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#f5f3f0];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#e5e2dd] rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#d5d2cd];
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.pixel-font {
+  font-family: 'Press Start 2P', monospace;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
